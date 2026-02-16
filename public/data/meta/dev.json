@@ -13,8 +13,8 @@
       "id": "layout-system",
       "title": "Layout System",
       "description": "Let you change the layout of the Shindo Client for a more personalized experience.",
-      "progress": 90,
-      "status": "Last Stage"
+      "progress": 100,
+      "status": "Done"
     },
     {
       "id": "profile-sync",
@@ -34,35 +34,28 @@
       "id": "mod-icons",
       "title": "Mod Icons",
       "description": "Mod Icons for Shindo Client UIs and more.",
-      "progress": 80,
+      "progress": 90,
       "status": "Final Steps"
-    },
-    {
-      "id": "cheat-detector",
-      "title": "Cheat Detector",
-      "description": "Detect hackers while you are playing the game.",
-      "progress": 50,
-      "status": "In Development"
-    },
-    {
-      "id": "no-cheaters",
-      "title": "No Cheaters",
-      "description": "Keep logs of suspicious players while you are playing the game.",
-      "progress": 45,
-      "status": "In Development"
     },
     {
       "id": "community-made-addons",
       "title": "Community Made Addons",
       "description": "Let you make your own addons for Shindo Client and/or add community made addons.",
-      "progress": 10,
-      "status": "In Research"
+      "progress": 50,
+      "status": "In Dev"
+    },
+    {
+      "id": "friends-chat",
+      "title": "Friends Chat",
+      "description": "It allows you to add friends who use the client to a list and allows you to chat with them without needing to be on the same server.",
+      "progress": 25,
+      "status": "Researching"
     },
     {
       "id": "community-made-layouts-and-themes",
       "title": "Community Made Layouts & Themes",
       "description": "Let you make your own layouts and themes for Shindo Client and/or add community made layouts and themes.",
-      "progress": 3,
+      "progress": 15,
       "status": "In Research"
     }
   ]
