@@ -1,6 +1,6 @@
 {
   "headline": "Prototyping cross-platform modules and backend services to keep ShindoClient future-proof.",
-  "lastUpdated": "2026-01-27T00:00:00.000Z",
+  "lastUpdated": "2026-02-17T00:00:00.000Z",
   "features": [
     {
       "id": "microsoft-login",
@@ -41,7 +41,7 @@
       "id": "community-made-addons",
       "title": "Community Made Addons",
       "description": "Let you make your own addons for Shindo Client and/or add community made addons.",
-      "progress": 50,
+      "progress": 55,
       "status": "In Dev"
     },
     {
