@@ -1,9 +1,11 @@
 {
   "updatelink": "https://github.com/ShindoClient/shindo-client/releases/latest",
   "launcherLink": "https://github.com/ShindoClient/shindo-launcher/releases/latest",
-  "latestversionstring": "5.1.10",
-  "latestversion": 5110,
+  "latestversionstring": "5.1.11",
+  "latestversion": 5111,
   "discord": "https://discord.gg/uU56tvtXMU",
   "discontinued": false,
-  "soar8released": false
+  "soar8released": false,
+  "versioningUrl": "https://cdn.shindoclient.com/data/meta/versioning.json",
+  "javaMetaUrl": "https://cdn.shindoclient.com/data/meta/java.json"
 }
