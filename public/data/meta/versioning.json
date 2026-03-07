@@ -8,15 +8,15 @@
     "discord": "https://discord.gg/uU56tvtXMU"
   },
   "latest": {
-    "build": 5111,
-    "semver": "5.1.11",
+    "build": 5110,
+    "semver": "5.1.10",
     "versionId": "ShindoClient-1.8.9",
     "minecraftVersion": "1.8.9"
   },
   "channels": {
     "stable": {
-      "build": 5111,
-      "semver": "5.1.11",
+      "build": 5110,
+      "semver": "5.1.10",
       "versionId": "ShindoClient-1.8.9"
     }
   },
@@ -30,8 +30,8 @@
       "bannerUrl": "https://cdn.shindoclient.com/assets/banners/minecraft/1-8-9.svg",
       "builds": [
         {
-          "build": 5111,
-          "semver": "5.1.11",
+          "build": 5110,
+          "semver": "5.1.10",
           "label": "Stable",
           "releasedAt": "2026-03-06T00:00:00.000Z",
           "artifacts": {
@@ -52,7 +52,8 @@
             "versionJsonPath": "ShindoClient.json"
           }
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "id": "ShindoClient-1.12.2",
@@ -73,7 +74,8 @@
             "versionJsonPath": "ShindoClient.json"
           }
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "id": "ShindoClient-1.16.5",
@@ -94,7 +96,8 @@
             "versionJsonPath": "ShindoClient.json"
           }
         }
-      ]
+      ],
+      "enabled": false
     }
   ],
   "legacy": {
