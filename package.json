@@ -1,28 +1,17 @@
 {
-    "name": "shindo-cdn",
-    "version": "1.0.0",
-    "description": "Landing e CDN do Shindo Client constru�da com Nuxt 3",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "nuxt dev",
-        "build": "nuxt build",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview"
-    },
-    "dependencies": {
-        "@vercel/analytics": "^1.5.0",
-        "nuxt": "3.13.2"
-    },
-    "packageManager": "pnpm@10.18.3",
-    "pnpm": {
-        "allowedBuiltDependencies": [
-            "esbuild",
-            "@parcel/watcher"
-        ],
-        "onlyBuiltDependencies": [
-            "@parcel/watcher",
-            "esbuild"
-        ]
-    }
+  "name": "shindo-cdn",
+  "version": "1.0.0",
+  "description": "Landing e CDN do Shindo Client constru�da com Nuxt 3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "nuxt": "3.13.2"
+  }
 }
