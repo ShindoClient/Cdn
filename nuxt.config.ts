@@ -5,17 +5,21 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Shindo Client CDN",
-      htmlAttrs: { lang: "pt-BR" },
+      htmlAttrs: { lang: "en-US" },
       meta: [
-        { name: "description", content: "Infraestrutura CDN oficial para distribui��o do Shindo Client." },
+        {
+          name: "description",
+          content:
+            "Official CDN infrastructure for distributing the Shindo Client.",
+        },
         { name: "robots", content: "noindex, nofollow" },
-        { name: "theme-color", content: "#8539ff" }
+        { name: "theme-color", content: "#8539ff" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
-    }
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
   },
   routeRules: {
-    "/**": { prerender: true }
+    "/**": { prerender: true },
   },
-  compatibilityDate: "2025-11-10"
+  compatibilityDate: "2025-11-10",
 });

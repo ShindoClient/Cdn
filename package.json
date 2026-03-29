@@ -10,8 +10,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
+  "devDependencies": {
+    "@types/node": "^20.19.37",
+    "@vercel/node": "^3.2.29",
+    "typescript": "^5.9.3",
+    "vercel": "^33.7.1"
+  },
   "dependencies": {
-    "@vercel/analytics": "^1.5.0",
+    "@vercel/analytics": "^1.6.1",
     "nuxt": "3.13.2"
   }
 }
