@@ -32,11 +32,11 @@ export default defineEventHandler(async (event) => {
 
     return {
       access_token: response.access_token,
-      refresh_token: response.refresh_token ?? refreshToken, // Spotify às vezes devolve um novo
+      refresh_token: response.refresh_token ?? refreshToken,
       expires_in: response.expires_in,
     };
   } catch (err) {
-    console.error("[Spotify Refresh] Failed to refresh token:", err);
+    console.error("[Spotify Refresh] Failed:", err);
     throw createError({
       statusCode: 401,
       statusMessage: "Failed to refresh Spotify token",

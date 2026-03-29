@@ -5,20 +5,18 @@ export default defineEventHandler(async (event) => {
   const code = query.code as string | undefined;
   const error = query.error as string | undefined;
 
-  // Erro do lado do Spotify (usuário negou, etc.)
   if (error || !code) {
     return sendRedirect(
       event,
-      `shindo://spotify/error?reason=${error ?? "no_code"}`,
+      `http://127.0.0.1:8888/callback?error=${error ?? "no_code"}`,
     );
   }
 
   const clientId = process.env.SPOTIFY_CLIENT_ID!;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET!;
-  const redirectUri = process.env.SPOTIFY_REDIRECT_URI!; // https://cdn.shindoclient.com/api/spotify/callback
+  const redirectUri = process.env.SPOTIFY_REDIRECT_URI!;
 
   try {
-    // Troca o code pelo access_token — o secret fica só aqui no servidor
     const response = await $fetch<SpotifyTokenResponse>(
       "https://accounts.spotify.com/api/token",
       {
@@ -35,8 +33,7 @@ export default defineEventHandler(async (event) => {
       },
     );
 
-    // Redireciona pro deep link do client com os tokens
-    // O client abre uma página local (localhost:8888) que captura esses parâmetros
+    // Redireciona pro servidor local do client com os tokens no query string
     const params = new URLSearchParams({
       access_token: response.access_token,
       refresh_token: response.refresh_token ?? "",
