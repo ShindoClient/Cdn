@@ -1,23 +1,26 @@
 {
-  "name": "shindo-cdn",
-  "version": "1.0.0",
-  "description": "Landing e CDN do Shindo Client constru�da com Nuxt 3",
+  "name": "@shindojs/cdn",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "devDependencies": {
-    "@types/node": "^20.19.37",
-    "@vercel/node": "^3.2.29",
-    "typescript": "^5.9.3",
-    "vercel": "^33.7.1"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.6.1",
-    "nuxt": "3.13.2"
+    "@shindojs/styles": "4.0.1",
+    "@sveltejs/adapter-auto": "^7.0.1",
+    "@sveltejs/kit": "^2.17.1",
+    "@vercel/analytics": "^2.0.1",
+    "lucide-svelte": "^1.0.1",
+    "svelte": "^5.38.2",
+    "vite": "^8.0.9"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@types/bun": "^1.3.12",
+    "svelte-check": "^4.3.1",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,0 +1,26 @@
+/* shindo-cdn - Main CSS */
+:root {
+	color-scheme: dark;
+	--bg-start: #161b29;
+	--bg-mid: #0b0d16;
+	--bg-end: #05060a;
+	--card-bg: rgba(9, 12, 22, 0.75);
+	--border: rgba(255, 255, 255, 0.08);
+	--text: #f5f7ff;
+	--muted: #d5dcff;
+	--primary: #89a8ff;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	background: radial-gradient(circle at top, var(--bg-start) 0%, var(--bg-mid) 60%, var(--bg-end) 100%);
+	color: var(--text);
+}
