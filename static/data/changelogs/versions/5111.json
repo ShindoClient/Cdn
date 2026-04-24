@@ -1,0 +1,16 @@
+{
+    "changelogs": [
+        {
+            "text": "Some Bug Fixes & Code Improvements",
+            "type": 1
+        },
+        {
+            "text": "Fix UI System Bugs",
+            "type": 1
+        },
+        {
+            "text": "Fix UI Some OS Related Bugs",
+            "type": 1
+        }
+    ]
+}

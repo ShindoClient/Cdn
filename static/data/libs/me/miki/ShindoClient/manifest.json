@@ -35,6 +35,10 @@
       {
         "build": 5110,
         "jarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/minecraft/1.8.9/builds/5110/ShindoClient-1.8.9-5110.jar"
+      },
+      {
+        "build": 5111,
+        "jarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/minecraft/1.8.9/builds/5111/ShindoClient-1.8.9-5111.jar"
       }
     ]
   }
