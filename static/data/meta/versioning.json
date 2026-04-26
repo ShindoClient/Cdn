@@ -78,9 +78,6 @@
       "enabled": true
     }
   ],
-      "enabled": true
-    }
-  ],
   "legacy": {
     "updatelink": "https://github.com/ShindoClient/shindo-client/releases/latest",
     "launcherLink": "https://github.com/ShindoClient/shindo-launcher/releases/latest",
