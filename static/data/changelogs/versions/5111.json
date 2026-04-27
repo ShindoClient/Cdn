@@ -1,16 +1,32 @@
 {
     "changelogs": [
         {
-            "text": "Some Bug Fixes & Code Improvements",
+            "text": "UI System Optimizations (50% less code).",
             "type": 1
         },
         {
-            "text": "Fix UI System Bugs",
+            "text": "Some OS Related Bugs.",
             "type": 1
         },
         {
-            "text": "Fix UI Some OS Related Bugs",
+            "text": "Some Profile Manager Bugs.",
             "type": 1
+        },
+        {
+            "text": "Profile Sharing via Code (UI Still not finished).",
+            "type": 0
+        },
+        {
+            "text": "Better Transition System on Modmenu.",
+            "type": 0
+        },
+        {
+            "text": "Navigation Hub before Modmenu.",
+            "type": 0
+        },
+        {
+            "text": "Removed: Network Manager (needs an UI redesign + better implementation).",
+            "type": 2
         }
     ]
 }
