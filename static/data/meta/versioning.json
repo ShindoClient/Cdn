@@ -1,34 +1,45 @@
 {
   "schema": "shindo.versioning.v3",
-  "updatedAt": "2026-04-26T12:00:00.000Z",
+  "updatedAt": "2026-04-27T12:00:00.000Z",
   "defaultVersionId": "ShindoClient-1.8.9",
+  "recommended": "stable",
   "links": {
     "clientRelease": "https://github.com/ShindoClient/shindo-client/releases/latest",
     "launcherRelease": "https://github.com/ShindoClient/shindo-launcher/releases/latest",
     "discord": "https://discord.gg/uU56tvtXMU"
   },
+  "java": {
+    "version": 8,
+    "vendor": "any"
+  },
   "latest": {
-    "versionBase": 5111,
-    "buildNumber": 2,
-    "buildId": "5111.2",
-    "type": "stable",
-    "semver": "5.1.11",
     "build": 5111,
+    "buildNumber": 1,
+    "buildId": "5111.1",
+    "semver": "5.1.11",
+    "type": "snapshot",
     "versionId": "ShindoClient-1.8.9",
     "minecraftVersion": "1.8.9"
   },
   "channels": {
     "stable": {
-      "versionBase": 5111,
-      "buildNumber": 2,
-      "buildId": "5111.2",
+      "build": 5110,
+      "buildNumber": 1,
+      "buildId": "5110.1",
+      "semver": "5.1.10",
       "type": "stable",
-      "semver": "5.1.11",
+      "versionId": "ShindoClient-1.8.9"
+    },
+    "snapshot": {
       "build": 5111,
+      "buildNumber": 1,
+      "buildId": "5111.1",
+      "semver": "5.1.11",
+      "type": "snapshot",
       "versionId": "ShindoClient-1.8.9"
     }
   },
-"versions": [
+  "versions": [
     {
       "id": "ShindoClient-1.8.9",
       "name": "Shindo Client 1.8.9",
@@ -42,11 +53,11 @@
           "versionBase": 5111,
           "buildNumber": 1,
           "buildId": "5111.1",
-          "type": "stable",
+          "type": "snapshot",
           "semver": "5.1.11",
           "build": 5111,
-          "label": "Stable",
-          "releasedAt": "2026-03-06T00:00:00.000Z",
+          "label": "Snapshot",
+          "releasedAt": "2026-04-27T12:00:00.000Z",
           "artifacts": {
             "packageUrl": "https://github.com/ShindoClient/shindo-client/releases/latest/download/ShindoClient.zip",
             "versionUrl": "https://github.com/ShindoClient/shindo-client/releases/latest/download/version.txt",
@@ -54,6 +65,24 @@
             "jarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/minecraft/1.8.9/builds/5111.1/ShindoClient-1.8.9-5111.1.jar",
             "legacyJarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/5111.1/ShindoClient-5111.1.jar",
             "changelogUrl": "https://cdn.shindoclient.com/data/changelogs/versions/5111.json"
+          }
+        },
+        {
+          "versionBase": 5110,
+          "buildNumber": 1,
+          "buildId": "5110.1",
+          "type": "stable",
+          "semver": "5.1.10",
+          "build": 5110,
+          "label": "Stable",
+          "releasedAt": "2026-04-27T12:00:00.000Z",
+          "artifacts": {
+            "packageUrl": "https://github.com/ShindoClient/shindo-client/releases/download/5.1.10/ShindoClient.zip",
+            "versionUrl": "https://github.com/ShindoClient/shindo-client/releases/download/5.1.10/version.txt",
+            "versionJsonPath": "ShindoClient.json",
+            "jarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/minecraft/1.8.9/builds/5110/ShindoClient-1.8.9-5110.jar",
+            "legacyJarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/5110/ShindoClient-5110.jar",
+            "changelogUrl": "https://cdn.shindoclient.com/data/changelogs/versions/5110.json"
           }
         }
       ],
