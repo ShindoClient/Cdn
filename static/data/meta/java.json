@@ -1,0 +1,134 @@
+{
+  "schema": "shindo.java.v2",
+  "updatedAt": "2026-03-06T00:00:00.000Z",
+  "defaultProvider": "temurin",
+  "fallbackToSystem": true,
+  "supportedJavaVersions": [8, 11, 17, 21],
+  "supportedPackages": ["jre", "jdk", "jdk-full"],
+  "runtimes": {
+    "temurin": {
+      "win32": {
+        "x64": {
+          "8": {
+            "jre": { "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u432-b06/OpenJDK8U-jre_x64_windows_hotspot_8u432b06.zip", "archiveType": "zip" }
+          },
+          "11": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jre/windows-x64.zip", "archiveType": "zip" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk/windows-x64.zip", "archiveType": "zip" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk-full/windows-x64.zip", "archiveType": "zip" }
+          },
+          "17": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jre/windows-x64.zip", "archiveType": "zip" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk/windows-x64.zip", "archiveType": "zip" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk-full/windows-x64.zip", "archiveType": "zip" }
+          },
+          "21": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jre/windows-x64.zip", "archiveType": "zip" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk/windows-x64.zip", "archiveType": "zip" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk-full/windows-x64.zip", "archiveType": "zip" }
+          }
+        }
+      },
+      "linux": {
+        "x64": {
+          "8": {
+            "jre": { "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u432-b06/OpenJDK8U-jre_x64_linux_hotspot_8u432b06.tar.gz", "archiveType": "tar.gz" }
+          },
+          "11": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jre/linux-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" }
+          },
+          "17": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jre/linux-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" }
+          },
+          "21": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jre/linux-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" }
+          }
+        },
+        "arm64": {
+          "8": {
+            "jre": { "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u432-b06/OpenJDK8U-jre_aarch64_linux_hotspot_8u432b06.tar.gz", "archiveType": "tar.gz" }
+          },
+          "11": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jre/linux-arm64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk/linux-arm64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk-full/linux-arm64.tar.gz", "archiveType": "tar.gz" }
+          },
+          "17": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jre/linux-arm64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk/linux-arm64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk-full/linux-arm64.tar.gz", "archiveType": "tar.gz" }
+          },
+          "21": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jre/linux-arm64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk/linux-arm64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk-full/linux-arm64.tar.gz", "archiveType": "tar.gz" }
+          }
+        }
+      },
+      "darwin": {
+        "x64": {
+          "8": {
+            "jre": { "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u432-b06/OpenJDK8U-jre_x64_mac_hotspot_8u432b06.tar.gz", "archiveType": "tar.gz" }
+          },
+          "11": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jre/macos-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk/macos-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/11/jdk-full/macos-x64.tar.gz", "archiveType": "tar.gz" }
+          },
+          "17": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jre/macos-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk/macos-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/17/jdk-full/macos-x64.tar.gz", "archiveType": "tar.gz" }
+          },
+          "21": {
+            "jre": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jre/macos-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk/macos-x64.tar.gz", "archiveType": "tar.gz" },
+            "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/temurin/21/jdk-full/macos-x64.tar.gz", "archiveType": "tar.gz" }
+          }
+        }
+      }
+    },
+    "zulu": {
+      "win32": {
+        "x64": {
+          "8": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/8/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/8/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/8/jdk-full/windows-x64.zip", "archiveType": "zip" } },
+          "11": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/11/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/11/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/11/jdk-full/windows-x64.zip", "archiveType": "zip" } },
+          "17": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/17/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/17/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/17/jdk-full/windows-x64.zip", "archiveType": "zip" } },
+          "21": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/21/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/21/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/21/jdk-full/windows-x64.zip", "archiveType": "zip" } }
+        }
+      },
+      "linux": {
+        "x64": {
+          "8": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/8/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/8/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/8/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } },
+          "11": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/11/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/11/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/11/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } },
+          "17": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/17/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/17/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/17/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } },
+          "21": { "jre": { "url": "https://cdn.shindoclient.com/data/java/zulu/21/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/zulu/21/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/zulu/21/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } }
+        }
+      }
+    },
+    "liberica": {
+      "win32": {
+        "x64": {
+          "8": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/8/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/8/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/8/jdk-full/windows-x64.zip", "archiveType": "zip" } },
+          "11": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/11/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/11/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/11/jdk-full/windows-x64.zip", "archiveType": "zip" } },
+          "17": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/17/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/17/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/17/jdk-full/windows-x64.zip", "archiveType": "zip" } },
+          "21": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/21/jre/windows-x64.zip", "archiveType": "zip" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/21/jdk/windows-x64.zip", "archiveType": "zip" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/21/jdk-full/windows-x64.zip", "archiveType": "zip" } }
+        }
+      },
+      "linux": {
+        "x64": {
+          "8": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/8/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/8/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/8/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } },
+          "11": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/11/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/11/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/11/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } },
+          "17": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/17/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/17/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/17/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } },
+          "21": { "jre": { "url": "https://cdn.shindoclient.com/data/java/liberica/21/jre/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk": { "url": "https://cdn.shindoclient.com/data/java/liberica/21/jdk/linux-x64.tar.gz", "archiveType": "tar.gz" }, "jdk-full": { "url": "https://cdn.shindoclient.com/data/java/liberica/21/jdk-full/linux-x64.tar.gz", "archiveType": "tar.gz" } }
+        }
+      }
+    }
+  }
+}
