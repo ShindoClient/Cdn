@@ -1,1 +1,1 @@
-# Shindo Client CDN
+# Shindo CDN

@@ -1,4 +1,7 @@
-// API: Spotify Callback - Exchange code for tokens, redirect to local server
+import { redirect } from '@sveltejs/kit';
+import { env } from '$env/dynamic/private';
+import type { RequestEvent } from '@sveltejs/kit';
+
 interface SpotifyTokenResponse {
 	access_token: string;
 	token_type: string;
@@ -7,24 +10,20 @@ interface SpotifyTokenResponse {
 	refresh_token?: string;
 }
 
-export const GET = async ({ url }) => {
-	const code = url.searchParams.get('code');
-	const error = url.searchParams.get('error');
+const LOCAL_CALLBACK = 'http://127.0.0.1:8888/callback';
 
-	if (error || !code) {
-		const location = `http://127.0.0.1:8888/callback?error=${error ?? 'no_code'}`;
-		return new Response(null, {
-			status: 302,
-			headers: { 'Location': location }
-		});
+export const GET = async ({ url }: RequestEvent) => {
+	const code = url.searchParams.get('code');
+	const err = url.searchParams.get('error');
+
+	if (err || !code) {
+		redirect(302, `${LOCAL_CALLBACK}?error=${err ?? 'no_code'}`);
 	}
 
-	const clientId = process.env.SPOTIFY_CLIENT_ID;
-	const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-	const redirectUri = process.env.SPOTIFY_REDIRECT_URI;
+	const { SPOTIFY_CLIENT_ID: clientId, SPOTIFY_CLIENT_SECRET: clientSecret, SPOTIFY_REDIRECT_URI: redirectUri } = env;
 
 	if (!clientId || !clientSecret || !redirectUri) {
-		return new Response('Spotify not configured', { status: 500 });
+		redirect(500, '/');
 	}
 
 	try {
@@ -32,7 +31,7 @@ export const GET = async ({ url }) => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
-				Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
+				Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`
 			},
 			body: new URLSearchParams({
 				grant_type: 'authorization_code',
@@ -45,11 +44,7 @@ export const GET = async ({ url }) => {
 
 		if (!response.ok) {
 			console.error('[Spotify Callback] Token exchange failed:', data);
-			const location = 'http://127.0.0.1:8888/callback?error=token_exchange_failed';
-			return new Response(null, {
-				status: 302,
-				headers: { 'Location': location }
-			});
+			redirect(302, `${LOCAL_CALLBACK}?error=token_exchange_failed`);
 		}
 
 		const params = new URLSearchParams({
@@ -58,17 +53,9 @@ export const GET = async ({ url }) => {
 			expires_in: String(data.expires_in)
 		});
 
-		const location = `http://127.0.0.1:8888/callback?${params.toString()}`;
-		return new Response(null, {
-			status: 302,
-			headers: { 'Location': location }
-		});
+		redirect(302, `${LOCAL_CALLBACK}?${params.toString()}`);
 	} catch (err) {
 		console.error('[Spotify Callback] Token exchange failed:', err);
-		const location = 'http://127.0.0.1:8888/callback?error=token_exchange_failed';
-		return new Response(null, {
-			status: 302,
-			headers: { 'Location': location }
-		});
+		redirect(302, `${LOCAL_CALLBACK}?error=token_exchange_failed`);
 	}
 };

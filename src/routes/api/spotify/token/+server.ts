@@ -1,4 +1,7 @@
-// API: Spotify Token - Exchange authorization code for access token
+import { json, error } from '@sveltejs/kit';
+import { env } from '$env/dynamic/private';
+import type { RequestEvent } from '@sveltejs/kit';
+
 interface SpotifyTokenResponse {
 	access_token: string;
 	token_type: string;
@@ -7,25 +10,17 @@ interface SpotifyTokenResponse {
 	refresh_token?: string;
 }
 
-export const GET = async ({ url }) => {
+export const GET = async ({ url }: RequestEvent) => {
 	const code = url.searchParams.get('code');
 
 	if (!code) {
-		return new Response(JSON.stringify({ error: 'Missing code parameter' }), {
-			status: 400,
-			headers: { 'Content-Type': 'application/json' }
-		});
+		error(400, 'Missing code parameter');
 	}
 
-	const clientId = process.env.SPOTIFY_CLIENT_ID;
-	const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-	const redirectUri = process.env.SPOTIFY_REDIRECT_URI;
+	const { SPOTIFY_CLIENT_ID: clientId, SPOTIFY_CLIENT_SECRET: clientSecret, SPOTIFY_REDIRECT_URI: redirectUri } = env;
 
 	if (!clientId || !clientSecret || !redirectUri) {
-		return new Response(JSON.stringify({ error: 'Spotify not configured' }), {
-			status: 500,
-			headers: { 'Content-Type': 'application/json' }
-		});
+		error(500, 'Spotify not configured');
 	}
 
 	try {
@@ -33,7 +28,7 @@ export const GET = async ({ url }) => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
-				Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
+				Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`
 			},
 			body: new URLSearchParams({
 				grant_type: 'authorization_code',
@@ -44,18 +39,13 @@ export const GET = async ({ url }) => {
 
 		const data: SpotifyTokenResponse = await response.json();
 
-		return new Response(JSON.stringify({
+		return json({
 			access_token: data.access_token,
 			refresh_token: data.refresh_token,
 			expires_in: data.expires_in
-		}), {
-			headers: { 'Content-Type': 'application/json' }
 		});
 	} catch (err) {
 		console.error('[Spotify Token] Exchange failed:', err);
-		return new Response(JSON.stringify({ error: 'Token exchange failed' }), {
-			status: 400,
-			headers: { 'Content-Type': 'application/json' }
-		});
+		error(400, 'Token exchange failed');
 	}
 };

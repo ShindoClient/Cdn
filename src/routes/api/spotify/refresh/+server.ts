@@ -1,4 +1,7 @@
-// API: Spotify Refresh - Refresh access token using refresh token
+import { json, error } from '@sveltejs/kit';
+import { env } from '$env/dynamic/private';
+import type { RequestEvent } from '@sveltejs/kit';
+
 interface SpotifyRefreshResponse {
 	access_token: string;
 	token_type: string;
@@ -7,24 +10,17 @@ interface SpotifyRefreshResponse {
 	refresh_token?: string;
 }
 
-export const GET = async ({ url }) => {
+export const GET = async ({ url }: RequestEvent) => {
 	const refreshToken = url.searchParams.get('refresh_token');
 
 	if (!refreshToken) {
-		return new Response(JSON.stringify({ error: 'Missing refresh_token parameter' }), {
-			status: 400,
-			headers: { 'Content-Type': 'application/json' }
-		});
+		error(400, 'Missing refresh_token parameter');
 	}
 
-	const clientId = process.env.SPOTIFY_CLIENT_ID;
-	const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+	const { SPOTIFY_CLIENT_ID: clientId, SPOTIFY_CLIENT_SECRET: clientSecret } = env;
 
 	if (!clientId || !clientSecret) {
-		return new Response(JSON.stringify({ error: 'Spotify not configured' }), {
-			status: 500,
-			headers: { 'Content-Type': 'application/json' }
-		});
+		error(500, 'Spotify not configured');
 	}
 
 	try {
@@ -32,7 +28,7 @@ export const GET = async ({ url }) => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
-				Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`
+				Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`
 			},
 			body: new URLSearchParams({
 				grant_type: 'refresh_token',
@@ -42,18 +38,13 @@ export const GET = async ({ url }) => {
 
 		const data: SpotifyRefreshResponse = await response.json();
 
-		return new Response(JSON.stringify({
+		return json({
 			access_token: data.access_token,
 			refresh_token: data.refresh_token ?? refreshToken,
 			expires_in: data.expires_in
-		}), {
-			headers: { 'Content-Type': 'application/json' }
 		});
 	} catch (err) {
 		console.error('[Spotify Refresh] Failed:', err);
-		return new Response(JSON.stringify({ error: 'Failed to refresh Spotify token' }), {
-			status: 401,
-			headers: { 'Content-Type': 'application/json' }
-		});
+		error(401, 'Failed to refresh Spotify token');
 	}
 };

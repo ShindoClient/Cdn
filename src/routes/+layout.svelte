@@ -1,11 +1,15 @@
 <script lang="ts">
-	import '../app.css';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit'
-  import { onMount } from 'svelte'
+	import './layout.css';
+	import favicon from '$lib/assets/favicon.ico';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { onMount } from 'svelte';
+
+	let { children } = $props();
+
 	onMount(() => {
 		injectAnalytics();
 	});
 </script>
 
-
-<slot />
+<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+{@render children()}

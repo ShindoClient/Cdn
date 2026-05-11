@@ -1,12 +1,11 @@
-// API: Spotify Login - Redirect to Spotify Authorization
 import { redirect } from '@sveltejs/kit';
+import { env } from '$env/dynamic/private';
 
 export const GET = async () => {
-	const clientId = process.env.SPOTIFY_CLIENT_ID;
-	const redirectUri = process.env.SPOTIFY_REDIRECT_URI;
+	const { SPOTIFY_CLIENT_ID: clientId, SPOTIFY_REDIRECT_URI: redirectUri } = env;
 
 	if (!clientId || !redirectUri) {
-		return new Response('Spotify not configured', { status: 500 });
+		redirect(500, '/');
 	}
 
 	const params = new URLSearchParams({
@@ -17,12 +16,5 @@ export const GET = async () => {
 		show_dialog: 'true'
 	});
 
-	const location = `https://accounts.spotify.com/authorize?${params.toString()}`;
-	
-	return new Response(null, {
-		status: 302,
-		headers: {
-			'Location': location
-		}
-	});
+	redirect(302, `https://accounts.spotify.com/authorize?${params.toString()}`);
 };
