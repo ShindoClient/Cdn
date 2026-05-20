@@ -18,7 +18,7 @@
     "buildId": "5111.1",
     "semver": "5.1.11",
     "type": "stable",
-    "versionId": "ShindoClient-1.8.9",
+    "versionId": "ShindoClient-5111.1",
     "minecraftVersion": "1.8.9"
   },
   "channels": {
@@ -28,7 +28,7 @@
       "buildId": "5111.1",
       "semver": "5.1.11",
       "type": "stable",
-      "versionId": "ShindoClient-1.8.9"
+      "versionId": "ShindoClient-5111.1"
     },
     "dev": {
       "build": 5111,
@@ -36,13 +36,13 @@
       "buildId": "5111.2",
       "semver": "5.1.11",
       "type": "dev",
-      "versionId": "ShindoClient-1.8.9"
+      "versionId": "ShindoClient-5111.2"
     }
   },
   "versions": [
     {
-      "id": "ShindoClient-1.8.9",
-      "name": "Shindo Client 1.8.9",
+      "id": "ShindoClient",
+      "name": "Shindo Client",
       "minecraftVersion": "1.8.9",
       "baseVersion": "1.8.9",
       "assetsIndex": "1.8",
@@ -59,11 +59,7 @@
           "label": "Stable",
           "releasedAt": "2026-04-27T12:00:00.000Z",
           "artifacts": {
-            "packageUrl": "https://github.com/ShindoClient/shindo-client/releases/latest/download/ShindoClient.zip",
             "versionUrl": "https://github.com/ShindoClient/shindo-client/releases/latest/download/version.txt",
-            "versionJsonPath": "ShindoClient-5111.1.json",
-            "jarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/minecraft/1.8.9/builds/5111.1/ShindoClient-1.8.9-5111.1.jar",
-            "legacyJarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/5111.1/ShindoClient-5111.1.jar",
             "jsonUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/5111.1/ShindoClient-5111.1.json",
             "changelogUrl": "https://cdn.shindoclient.com/data/changelogs/versions/5111.json"
           }
@@ -78,11 +74,7 @@
           "label": "Dev",
           "releasedAt": "2026-04-27T12:00:00.000Z",
           "artifacts": {
-            "packageUrl": "https://github.com/ShindoClient/shindo-client/releases/latest/download/ShindoClient.zip",
             "versionUrl": "https://github.com/ShindoClient/shindo-client/releases/latest/download/version.txt",
-            "versionJsonPath": "ShindoClient-5111.2.json",
-            "jarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/minecraft/1.8.9/builds/5111.2/ShindoClient-1.8.9-5111.2.jar",
-            "legacyJarUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/5111.2/ShindoClient-5111.2.jar",
             "jsonUrl": "https://cdn.shindoclient.com/data/libs/me/miki/ShindoClient/5111.2/ShindoClient-5111.2.json",
             "changelogUrl": "https://cdn.shindoclient.com/data/changelogs/versions/5111.json"
           }
@@ -99,9 +91,5 @@
     "discord": "https://discord.gg/uU56tvtXMU",
     "discontinued": false,
     "soar8released": false
-  },
-  "storageLayout": {
-    "jarsByMinecraftVersion": "/data/libs/me/miki/ShindoClient/minecraft/{minecraftVersion}/builds/{buildId}/ShindoClient-{minecraftVersion}-{buildId}.jar",
-    "legacyJars": "/data/libs/me/miki/ShindoClient/{buildId}/ShindoClient-{buildId}.jar"
   }
 }
