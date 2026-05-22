@@ -14,49 +14,59 @@ jobs:
 
     steps:
       - name: Send Discord Components V2
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          REPOSITORY: ${{ github.repository }}
+          REPO_URL: ${{ github.event.repository.html_url }}
+          IS_PRIVATE: ${{ github.event.repository.private }}
+          COMMITS_JSON: ${{ toJson(github.event.commits) }}
         run: |
-          COMMITS=$(printf '%s\n' '${{ toJson(github.event.commits) }}' | jq -r '
-            .[] |
-            "[`" + (.id[0:7]) + "`](" + .url + ") " +
-            .message +
-            " - " +
-            .author.name
-          ' | sed ':a;N;$!ba;s/\n/\\n/g')
-          
-          TIME=$(date +"%H:%M UTC")
+          sudo apt-get update
+          sudo apt-get install -y jq
 
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            "${{ secrets.DISCORD_WEBHOOK }}?with_components=true" \
-            -d "{
-              \"flags\": 32768,
-              \"components\": [
+          COMMITS=$(echo "$COMMITS_JSON" | jq -r --arg repo_url "$REPO_URL" --arg private "$IS_PRIVATE" '
+            map(
+              "- " +
+              (if $private == "true"
+                then
+                  "`" + (.id[0:7]) + "` " + (.message | split("\n")[0])
+                else
+                  "[`" + (.id[0:7]) + "`](" + $repo_url + "/commit/" + .id + ") " + (.message | split("\n")[0])
+                end
+              ) +
+              " — " + .author.name
+            ) | join("\n")
+          ')
+
+          REPO_LINE=$(if [ "$IS_PRIVATE" = "true" ]; then
+            echo "### $REPOSITORY"
+          else
+            echo "### [$REPOSITORY]($REPO_URL)"
+          fi)
+
+          TIME=$(date -u +"%H:%M UTC")
+
+          PAYLOAD=$(jq -n \
+            --arg repo_line "$REPO_LINE" \
+            --arg commits "$COMMITS" \
+            --arg time "$TIME" \
+            '{
+              flags: 32768,
+              components: [
                 {
-                  \"type\": 17,
-                  \"components\": [
-                    {
-                      \"type\": 10,
-                      \"content\": \"### [${{ github.repository }}](https://github.com/${{ github.repository }})\"
-                    },
-                    {
-                      \"type\": 14,
-                      \"spacing\": 2,
-                      \"divider\": true
-                    },
-                    {
-                      \"type\": 10,
-                      \"content\": \"${COMMITS}\"
-                    },
-                    {
-                      \"type\": 14,
-                      \"spacing\": 2,
-                      \"divider\": true
-                    },
-                    {
-                      \"type\": 10,
-                      \"content\": \"-# ${TIME} • by ShindoClient Team.\"
-                    }
+                  type: 17,
+                  components: [
+                    { type: 10, content: $repo_line },
+                    { type: 14, spacing: 2, divider: true },
+                    { type: 10, content: $commits },
+                    { type: 14, spacing: 2, divider: true },
+                    { type: 10, content: ("-# " + $time + " • by ShindoClient Team.") }
                   ]
                 }
               ]
-            }"
+            }')
+
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            "$DISCORD_WEBHOOK?with_components=true" \
+            -d "$PAYLOAD"
