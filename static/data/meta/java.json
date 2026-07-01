@@ -1,0 +1,112 @@
+{
+  "schema": "shindo.java.v1",
+  "updatedAt": "2026-06-07T00:00:00.000Z",
+  "runtimes": [
+    {
+      "javaVersion": 8,
+      "vendor": "zulu",
+      "purpose": "minecraft",
+      "architectures": {
+        "windows": {
+          "x64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.94.0.17-ca-jdk8.0.492-win_x64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu8.94.0.17-ca-jdk8.0.492-win_x64/bin/java.exe",
+              "type": "zip"
+            }
+          }
+        },
+        "macos": {
+          "x64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.94.0.17-ca-jdk8.0.492-macosx_x64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu8.94.0.17-ca-jdk8.0.492-macosx_x64/zulu-8.jdk/Contents/Home/bin/java",
+              "type": "zip"
+            }
+          },
+          "arm64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.94.0.17-ca-jdk8.0.492-macosx_aarch64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu8.94.0.17-ca-jdk8.0.492-macosx_aarch64/zulu-8.jdk/Contents/Home/bin/java",
+              "type": "zip"
+            }
+          }
+        },
+        "linux": {
+          "x64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.94.0.17-ca-jdk8.0.492-linux_x64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu8.94.0.17-ca-jdk8.0.492-linux_x64/bin/java",
+              "type": "zip"
+            }
+          },
+          "arm64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.94.0.17-ca-jdk8.0.492-linux_aarch64.tar.gz",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu8.94.0.17-ca-jdk8.0.492-linux_aarch64/bin/java",
+              "type": "tar.gz"
+            }
+          }
+        }
+      }
+    },
+    {
+      "javaVersion": 21,
+      "vendor": "zulu",
+      "purpose": "launcher",
+      "architectures": {
+        "windows": {
+          "x64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu21.50.19-ca-jdk21.0.11-win_x64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu21.50.19-ca-jdk21.0.11-win_x64/bin/java.exe",
+              "type": "zip"
+            }
+          }
+        },
+        "macos": {
+          "x64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu21.50.19-ca-jdk21.0.11-macosx_x64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu21.50.19-ca-jdk21.0.11-macosx_x64/zulu-21.jdk/Contents/Home/bin/java",
+              "type": "zip"
+            }
+          },
+          "arm64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu21.50.19-ca-jdk21.0.11-macosx_aarch64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu21.50.19-ca-jdk21.0.11-macosx_aarch64/zulu-21.jdk/Contents/Home/bin/java",
+              "type": "zip"
+            }
+          }
+        },
+        "linux": {
+          "x64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu21.50.19-ca-jdk21.0.11-linux_x64.zip",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu21.50.19-ca-jdk21.0.11-linux_x64/bin/java",
+              "type": "zip"
+            }
+          },
+          "arm64": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu21.50.19-ca-jdk21.0.11-linux_aarch64.tar.gz",
+            "checksum": "sha256:PLACEHOLDER",
+            "extract": {
+              "javaPath": "zulu21.50.19-ca-jdk21.0.11-linux_aarch64/bin/java",
+              "type": "tar.gz"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
