@@ -1,62 +1,96 @@
 {
   "headline": "Prototyping cross-platform modules and backend services to keep ShindoClient future-proof.",
-  "lastUpdated": "2026-02-17T00:00:00.000Z",
+  "lastUpdated": "2026-07-07T00:00:00.000Z",
   "features": [
     {
       "id": "microsoft-login",
       "title": "Microsoft Auth System",
       "description": "Secure and automatic Microsoft authentication for the Shindo Client.",
       "progress": 100,
-      "status": "Done"
+      "status": "completed",
+      "tags": ["auth"],
+      "group": "Core"
     },
     {
       "id": "layout-system",
       "title": "Layout System",
       "description": "Let you change the layout of the Shindo Client for a more personalized experience.",
       "progress": 100,
-      "status": "Done"
+      "status": "completed",
+      "tags": ["ui"],
+      "group": "Core"
     },
     {
       "id": "profile-sync",
       "title": "Profile Share & Sync",
       "description": "Share your profiles with your friends and also add community made profiles.",
-      "progress": 95,
-      "status": "Almost Done"
+      "progress": 100,
+      "status": "completed",
+      "tags": ["social"],
+      "group": "Core"
     },
     {
       "id": "translations",
       "title": "Translations",
       "description": "Let you change the language of the Shindo Client.",
-      "progress": 90,
-      "status": "Last Stage"
+      "progress": 100,
+      "status": "completed",
+      "tags": ["i18n"],
+      "group": "Core"
     },
     {
       "id": "mod-icons",
       "title": "Mod Icons",
       "description": "Mod Icons for Shindo Client UIs and more.",
-      "progress": 90,
-      "status": "Final Steps"
+      "progress": 100,
+      "status": "completed",
+      "tags": ["ui", "temporary-icons"],
+      "group": "Core"
     },
     {
-      "id": "community-made-addons",
+      "id": "better-spotify",
+      "title": "Better Spotify Customizations",
+      "description": "Complete library management system, artist and playlist visualization, and an in-client Spotify controller matching the official client experience.",
+      "progress": 0,
+      "status": "planned",
+      "tags": ["ui", "integration"],
+      "group": "Experience"
+    },
+    {
+      "id": "via-version",
+      "title": "Via Version Modernization",
+      "description": "Overhaul the Via Version system to support modern Minecraft versions, ensuring seamless connectivity across protocol versions and fixing compatibility issues.",
+      "progress": 0,
+      "status": "planned",
+      "tags": ["networking", "core"],
+      "group": "Core"
+    },
+    {
+      "id": "community-addons",
       "title": "Community Made Addons",
-      "description": "Let you make your own addons for Shindo Client and/or add community made addons.",
-      "progress": 55,
-      "status": "In Dev"
+      "description": "Let you make your own addons for Shindo Client and/or add community made addons. Includes a full rework of the Network Manager system to improve server connectivity, fix Internet-related bugs, and resolve memory leaks in vanilla Minecraft.",
+      "progress": 0,
+      "status": "in_progress",
+      "tags": ["extension", "networking"],
+      "group": "Platform"
     },
     {
       "id": "friends-chat",
       "title": "Friends Chat",
       "description": "It allows you to add friends who use the client to a list and allows you to chat with them without needing to be on the same server.",
-      "progress": 25,
-      "status": "In Research"
+      "progress": 0,
+      "status": "in_progress",
+      "tags": ["social"],
+      "group": "Social"
     },
     {
-      "id": "community-made-layouts-and-themes",
+      "id": "community-layouts-themes",
       "title": "Community Made Layouts & Themes",
       "description": "Let you make your own layouts and themes for Shindo Client and/or add community made layouts and themes.",
-      "progress": 15,
-      "status": "In Research"
+      "progress": 0,
+      "status": "planned",
+      "tags": ["ui", "extension"],
+      "group": "Platform"
     }
   ]
 }

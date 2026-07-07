@@ -19,7 +19,3 @@
 		</p>
 	</main>
 </div>
-
-<style>
-
-</style>

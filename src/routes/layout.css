@@ -1,4 +1,9 @@
-@import 'tailwindcss';
+@import '@shindojs/styles/tailwind.css';
+
+body {
+	background: #0a0a0a !important;
+	background-image: none !important;
+}
 
 .notice-wrapper {
 	display: flex;
@@ -6,7 +11,6 @@
 	justify-content: center;
 	min-height: 100vh;
 	padding: 32px;
-	background: #0a0a0a;
 }
 
 .notice-card {
@@ -34,7 +38,7 @@
 	margin-bottom: 28px;
 }
 
-h1 {
+.notice-card h1 {
 	margin: 0 0 20px;
 	font-size: 30px;
 	font-weight: 700;
@@ -42,7 +46,7 @@ h1 {
 	line-height: 1.3;
 }
 
-p {
+.notice-card p {
 	margin: 16px 0;
 	font-size: 15px;
 	line-height: 1.7;
@@ -52,13 +56,13 @@ p {
 	margin-right: auto;
 }
 
-a {
+.notice-card a {
 	color: #8539ff;
 	text-decoration: none;
 	font-weight: 500;
 }
 
-a:hover {
+.notice-card a:hover {
 	text-decoration: underline;
 }
 
@@ -68,7 +72,6 @@ a:hover {
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	background: #0a0a0a;
 }
 
 .error-card {
@@ -98,7 +101,6 @@ a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #0a0a0a;
 }
 
 .card {
@@ -113,7 +115,6 @@ a:hover {
 	width: 48px;
 	height: 48px;
 	color: #ffffff;
-
 	margin: 0 auto 36px;
 }
 
