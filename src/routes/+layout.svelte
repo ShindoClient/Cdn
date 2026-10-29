@@ -1,5 +1,9 @@
 <script lang="ts">
 	import '../app.css';
+	import { dev } from '$app/env';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	let { children } = $props();
 </script>
@@ -7,3 +11,4 @@
 <div class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
 	{@render children()}
 </div>
+

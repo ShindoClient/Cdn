@@ -1,5 +1,5 @@
 {
-  "name": "sveltekit-rust-template",
+  "name": "@shindo/cdn",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -34,5 +34,8 @@
   "engines": {
     "bun": ">=1.1.0"
   },
-  "packageManager": "bun@1.4.4"
+  "packageManager": "bun@1.4.4",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
 }
