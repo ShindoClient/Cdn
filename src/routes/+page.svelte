@@ -22,10 +22,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>SvelteKit + Rust</title>
-</svelte:head>
-
 <main class="mx-auto flex min-h-screen max-w-md flex-col justify-center gap-6 px-6">
 	<header>
 		<h1 class="flex items-center justify-center gap-2 text-3xl font-bold tracking-tight">

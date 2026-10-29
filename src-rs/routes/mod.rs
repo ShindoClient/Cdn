@@ -9,5 +9,5 @@ use axum::routing::get;
 pub fn router() -> Router {
     Router::new()
         .route("/health", get(health::health))
-        .merge(spotify::router())
+        .nest("/spotify", spotify::router())
 }
